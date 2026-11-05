@@ -1,0 +1,235 @@
+/* =========================================================
+   LIGHT MODE (BASE)
+   ========================================================= */
+
+.card {
+    font-family: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+
+    color: #2b2b2b;
+    background-color: #f7f7f5;
+
+    text-align: center;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   DARK MODE (BASE)
+   ========================================================= */
+
+.nightMode.card {
+    background-color: #2a2b2e;
+    color: #dcdcdc;
+}
+
+
+/* =========================================================
+   WRAPPER FOR EXTRA BOXES
+   ========================================================= */
+
+.content-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* =========================================================
+   IMPORTANT BOX (RED)
+   ========================================================= */
+
+.important-box-wrapper {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.important-box {
+    background-color: rgba(245, 192, 193, 0.25);
+    border: 2px solid #e78284;
+    color: #2f1f1f;
+
+    padding: 10px 14px;
+    border-radius: 10px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.nightMode .important-box {
+    background-color: rgba(231, 130, 132, 0.22);
+    border-color: #f2a1a3;
+    color: #f1eaea;
+}
+
+
+/* =========================================================
+   MNEMONIC BOX (BLUE)
+   ========================================================= */
+
+.mnemonic-box-wrapper {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.mnemonic-box {
+    background-color: rgba(170, 190, 240, 0.25);
+    border: 2px solid #8caaee;
+    color: #2b3245;
+
+    padding: 10px 14px;
+    border-radius: 10px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.nightMode .mnemonic-box {
+    background-color: rgba(140, 170, 238, 0.18);
+    border-color: #a9c0ff;
+    color: #e8ecf7;
+}
+
+
+/* =========================================================
+   ICONS (color is applied via currentColor in the SVG)
+   ========================================================= */
+
+.important-icon,
+.mnemonic-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.important-icon { color: #e78284; }
+.nightMode .important-icon { color: #f2a1a3; }
+
+.mnemonic-icon { color: #8caaee; }
+.nightMode .mnemonic-icon { color: #a9c0ff; }
+
+
+/* =========================================================
+   BUTTONS (BONUS + LINK) AND BONUS CONTENT
+   ========================================================= */
+
+/* Hidden automatically when neither button is rendered */
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button-row:empty {
+    display: none;
+}
+
+/* Shared button style (used by both the bonus button and the link button) */
+.bonus-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    background-color: #f9f9f6;
+    color: #2b2b2b;
+
+    border: 1px solid #dadada;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.4;
+    text-decoration: none;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.bonus-btn:hover {
+    background-color: #f0f0eb;
+}
+
+/* Link button: keep link colors identical to the other button */
+a.link-btn,
+a.link-btn:visited,
+a.link-btn:hover {
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+.nightMode .bonus-btn {
+    background-color: #3a3b3f;
+    color: #dcdcdc;
+    border: 1px solid #4a4b50;
+}
+
+.nightMode .bonus-btn:hover {
+    background-color: #4a4b50;
+}
+
+.nightMode a.link-btn,
+.nightMode a.link-btn:visited,
+.nightMode a.link-btn:hover {
+    color: #dcdcdc;
+}
+
+/* Collapsible bonus content (toggled via the .open class) */
+.bonus-content {
+    display: none;
+
+    background-color: #f9f9f6;
+    color: #2b2b2b;
+
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #dadada;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.bonus-content.open {
+    display: block;
+}
+
+.nightMode .bonus-content {
+    background-color: #323337;
+    color: #dcdcdc;
+    border: 1px solid #4a4b50;
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+ul,
+ol {
+    text-align: left;
+    display: inline-block;
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img {
+    max-width: 75%;
+    height: auto;
+}

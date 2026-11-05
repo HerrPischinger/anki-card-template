@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anki card template</title>
+<meta name="description" content="A clean Anki card template with light and dark mode, important and mnemonic boxes, a collapsible bonus section, and a link button.">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root { --page: #eceae4; --ink: #2b2b2b; --muted: #6b6b66; --line: #d8d6cf; }
+  body.dark { --page: #1d1e20; --ink: #e6e6e6; --muted: #9a9a9a; --line: #3a3b3f; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font-family: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.6; }
+  main { max-width: 980px; margin: 0 auto; padding: 48px 20px 64px; }
+  header { text-align: center; margin-bottom: 32px; }
+  h1 { font-size: 34px; margin: 0 0 8px; font-weight: 600; }
+  header p { margin: 0 auto 20px; max-width: 620px; color: var(--muted); }
+  .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--ink); font: inherit; font-size: 15px; text-decoration: none; cursor: pointer; }
+  .pill:hover { border-color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 32px 0 48px; align-items: start; }
+  figure { margin: 0; }
+  figcaption { font-size: 13px; color: var(--muted); margin: 0 0 8px 4px; }
+  .demo.card { padding: 28px 20px 30px; border-radius: 14px; font-size: 20px; border: 1px solid var(--line); }
+  section h2 { font-size: 22px; margin: 0 0 12px; font-weight: 600; }
+  ol, ul.plain { padding-left: 22px; margin: 0 0 24px; }
+  code { background: rgba(127,127,127,.15); padding: 1px 6px; border-radius: 5px; font-size: .92em; }
+  table { border-collapse: collapse; width: 100%; margin: 0 0 24px; font-size: 15px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 500; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 40px; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Anki card template</h1>
+    <p>Light and dark mode, an <em>Important</em> box, a <em>Mnemonic</em> box, a collapsible <em>Bonus</em> section, and a link button for URLs such as YouTube videos.</p>
+    <div class="actions">
+      <button class="pill" id="theme" type="button">Switch to dark mode</button>
+      <a class="pill" href="https://github.com/HerrPischinger/anki-card-template">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="grid">
+    <figure>
+      <figcaption>Front</figcaption>
+      <div class="demo card">
+        <div>Which nerve supplies the deltoid muscle?</div>
+      </div>
+    </figure>
+
+    <figure>
+      <figcaption>Back, all fields filled</figcaption>
+      <div class="demo card">
+        <div>Which nerve supplies the deltoid muscle?</div>
+        <hr>
+        <div><b>Axillary nerve</b> (C5–C6)</div>
+        <div class="content-wrapper">
+          <div class="important-box-wrapper">
+            <div class="important-box">
+              <span class="important-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 3L2 21h20L12 3z"/><line x1="12" y1="9" x2="12" y2="14"/><line x1="12" y1="17" x2="12" y2="17.1"/></svg>
+              </span>
+              <span>At risk in surgical neck fractures of the humerus</span>
+            </div>
+          </div>
+          <div class="mnemonic-box-wrapper">
+            <div class="mnemonic-box">
+              <span class="mnemonic-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 13v3h8v-3a7 7 0 0 0-4-13z"/></svg>
+              </span>
+              <span>Axilla → axillary nerve</span>
+            </div>
+          </div>
+          <div class="button-row"><button class="bonus-btn" id="bonusBtn" type="button">Show bonus</button><a class="bonus-btn link-btn" href="https://www.youtube.com/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg>Open link</a></div>
+          <div class="bonus-content" id="bonusContent">Loss of function: abduction beyond 15° is weakened, and sensation is lost over the lateral upper arm.</div>
+        </div>
+      </div>
+    </figure>
+
+    <figure>
+      <figcaption>Back, only the link field filled</figcaption>
+      <div class="demo card">
+        <div>What does the Frank–Starling mechanism state?</div>
+        <hr>
+        <div>Stroke volume rises as preload increases</div>
+        <div class="content-wrapper">
+          <div class="button-row"><a class="bonus-btn link-btn" href="https://www.youtube.com/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg>Open link</a></div>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+  <section>
+    <h2>Fields</h2>
+    <table>
+      <tr><th>Field</th><th>Required</th><th>Purpose</th></tr>
+      <tr><td><code>Vorderseite</code></td><td>yes</td><td>Front of the card</td></tr>
+      <tr><td><code>Rückseite</code></td><td>yes</td><td>Back of the card</td></tr>
+      <tr><td><code>Wichtig</code></td><td>no</td><td>Red "Important" box</td></tr>
+      <tr><td><code>Eselsbrücke</code></td><td>no</td><td>Blue "Mnemonic" box</td></tr>
+      <tr><td><code>Bonus</code></td><td>no</td><td>Collapsible extra content</td></tr>
+      <tr><td><code>Link</code></td><td>no</td><td>URL for the link button</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Installation</h2>
+    <ol>
+      <li>In Anki, open <b>Tools → Manage Note Types</b>, pick your note type, and add the fields above.</li>
+      <li>Click <b>Cards…</b> and paste <code>templates/front.html</code> into the front template.</li>
+      <li>Paste <code>templates/back.html</code> into the back template.</li>
+      <li>Paste <code>style.css</code> into the styling tab.</li>
+    </ol>
+  </section>
+
+  <footer>Made by <a href="https://github.com/HerrPischinger">HerrPischinger</a></footer>
+</main>
+<script>
+(function () {
+  var body = document.body, cards = document.querySelectorAll('.demo.card');
+  var themeBtn = document.getElementById('theme');
+  themeBtn.addEventListener('click', function () {
+    var dark = body.classList.toggle('dark');
+    cards.forEach(function (c) { c.classList.toggle('nightMode', dark); });
+    themeBtn.textContent = dark ? 'Switch to light mode' : 'Switch to dark mode';
+  });
+  var bonus = document.getElementById('bonusContent'), bonusBtn = document.getElementById('bonusBtn');
+  bonusBtn.addEventListener('click', function () {
+    var open = bonus.classList.toggle('open');
+    bonusBtn.textContent = open ? 'Hide bonus' : 'Show bonus';
+  });
+})();
+</script>
+</body>
+</html>
