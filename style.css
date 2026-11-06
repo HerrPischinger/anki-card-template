@@ -140,11 +140,13 @@
     display: none;
 }
 
-/* Shared button style (used by both the bonus button and the link button) */
+/* Shared button style: the bonus button and the link button look identical */
 .bonus-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
 
     background-color: #f9f9f6;
     color: #2b2b2b;
