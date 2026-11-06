@@ -2,6 +2,8 @@
 
 A clean, readable card template for [Anki](https://apps.ankiweb.net/) with light and dark mode, a red **Important** box, a blue **Mnemonic** box, a collapsible **Bonus** section, and a **Link** button that opens any URL (for example a YouTube video).
 
+!［device-shots.jpg]
+
 ## Features
 
 - Light and dark mode (follows Anki's night mode)
