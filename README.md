@@ -26,6 +26,10 @@ Create a note type with these fields:
 | `Bonus` | no | Extra content, hidden until the Bonus button is clicked |
 | `Link` | no | URL; shows a "Link öffnen" button when filled |
 
+## Link button
+
+Put a plain URL in the `Link` field, for example `https://www.youtube.com/watch?v=...`. On desktop the link opens in your default browser. 
+
 ## Installation
 
 1. In Anki, open **Tools → Manage Note Types**, select your note type, and click **Fields** to add the fields above.
@@ -33,18 +37,6 @@ Create a note type with these fields:
 3. Paste the contents of [`templates/front.html`](templates/front.html) into **Front Template**.
 4. Paste the contents of [`templates/back.html`](templates/back.html) into **Back Template**.
 5. Paste the contents of [`style.css`](style.css) into **Styling**.
-
-## Link button
-
-Put a plain URL in the `Link` field, for example `https://www.youtube.com/watch?v=...`. On desktop the link opens in your default browser. 
-
-## Font
-
-Atkinson hyperlegible next is a font created by Braille Institute designed to improve legibility and readability. Features of the font are  clear,  distinctive letters and numbers that make reading easier. 
-
-## License
-
-MIT, see [LICENSE](LICENSE).
 
 ## Cloze note type
 
@@ -69,3 +61,14 @@ The [`cloze/`](cloze) folder contains the same design for Anki's **Cloze** note 
 4. Paste [`cloze/style.css`](cloze/style.css) into **Styling**.
 
 The cloze styling is the main `style.css` plus the cloze rules, so use `cloze/style.css` for this note type.
+
+## Font
+
+Atkinson hyperlegible next is a font created by Braille Institute designed to improve legibility and readability. Features of the font are  clear,  distinctive letters and numbers that make reading easier. 
+
+## AI usage
+Claude code was used to clean my code up since I am not a professional develope. It was also used to translate my comments etc. from German into English.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
