@@ -1,6 +1,6 @@
 # Anki card template
 
-A clean, readable card template for [Anki](https://apps.ankiweb.net/) with light and dark mode, a red **Important** box, a blue **Mnemonic** box, a collapsible **Bonus** section, and a **Link** button that opens any URL (for example a YouTube video).
+A clean, readable card template for [Anki](https://apps.ankiweb.net/) with light and dark mode, a red **Important** box, a blue **Mnemonic** box, a collapsible **Bonus** section, and a **Link** button that opens any URL (for example a YouTube video). A basic as well as a close version of the card is included.
 
 ![Screenshots of the temmplate](screenshots/device-shot.jpg)
 ## Features
