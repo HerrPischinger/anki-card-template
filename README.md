@@ -6,11 +6,11 @@ A clean, readable card template for [Anki](https://apps.ankiweb.net/) with light
 
 - Light and dark mode (follows Anki's night mode)
 - Optional **Important** box (red) for pitfalls and key facts
-- Optional **Mnemonic** box (blue) for memory aids
+- Optional **Mnemonic** box (blue) which can be used for memory aids, as well as background information
 - Optional **Bonus** section, collapsed until you click the button
 - Optional **Link** button in the same style, opening a URL from a field
 - Empty optional fields leave no gaps, and the button row hides itself when there are no buttons
-- Uses [Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next) with sensible system fallbacks
+- Uses [Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next)
 
 ## Fields
 
@@ -25,8 +25,6 @@ Create a note type with these fields:
 | `Bonus` | no | Extra content, hidden until the Bonus button is clicked |
 | `Link` | no | A URL; shows a "Link öffnen" button when filled |
 
-The field names are German. If you rename them, update the `{{...}}` placeholders in the templates to match.
-
 ## Installation
 
 1. In Anki, open **Tools → Manage Note Types**, select your note type, and click **Fields** to add the fields above.
@@ -37,17 +35,16 @@ The field names are German. If you rename them, update the `{{...}}` placeholder
 
 ## Link button
 
-Put a plain URL in the `Link` field, for example `https://www.youtube.com/watch?v=...`. The template uses `{{text:Link}}`, which strips any HTML Anki may have added, so the `href` stays clean. On desktop the link opens in your default browser.
+Put a plain URL in the `Link` field, for example `https://www.youtube.com/watch?v=...`. On desktop the link opens in your default browser. 
 
 ## Font
 
-*Atkinson Hyperlegible Next* is not a system font. Devices without it fall back to the system font. To get the same look everywhere, place the font file in Anki's media folder and load it with `@font-face` at the top of `style.css`.
+Atkinson hyperlegible next is a font created by Braille Institute designed to improve legibility and readability. Features of the font are  clear,  distinctive letters and numbers that make reading easier. 
 
 ## Repository layout
 
 ```
 .
-├── index.html            # live preview (GitHub Pages)
 ├── style.css             # card styling, also used by the preview
 └── templates/
     ├── front.html        # front template
