@@ -1,0 +1,59 @@
+<div id="wrapper" style="text-align: center">
+  <div id="centered" style="display: inline-block;">
+    {{cloze:Text}}
+  </div>
+</div>
+
+{{#Bild}}
+<div class="image-wrapper">{{Bild}}</div>
+{{/Bild}}
+
+<div class="content-wrapper">
+
+{{#Kasten}}
+<div class="important-box-wrapper">
+  <div class="important-box">
+    <span class="important-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+        <path d="M12 3L2 21h20L12 3z"/>
+        <line x1="12" y1="9" x2="12" y2="14"/>
+        <line x1="12" y1="17" x2="12" y2="17.1"/>
+      </svg>
+    </span>
+    <span>{{Kasten}}</span>
+  </div>
+</div>
+{{/Kasten}}
+
+{{#Eselsbrücke}}
+<div class="mnemonic-box-wrapper">
+  <div class="mnemonic-box">
+    <span class="mnemonic-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+        <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 13v3h8v-3a7 7 0 0 0-4-13z"/>
+      </svg>
+    </span>
+    <span>{{Eselsbrücke}}</span>
+  </div>
+</div>
+{{/Eselsbrücke}}
+
+<div class="button-row">{{#Bonus}}<button id="showBonusBtn" class="bonus-btn" onclick="toggleBonus()">Bonus anzeigen</button>{{/Bonus}}{{#Link}}<a class="link-btn" href="{{text:Link}}" target="_blank" rel="noopener"><button type="button" class="bonus-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg>Link öffnen</button></a>{{/Link}}</div>
+
+{{#Bonus}}
+<div id="bonusContent" class="bonus-content">
+  {{Bonus}}
+</div>
+{{/Bonus}}
+
+</div>
+
+<script>
+function toggleBonus() {
+  var content = document.getElementById("bonusContent");
+  var btn = document.getElementById("showBonusBtn");
+  if (!content || !btn) return;
+  var open = content.classList.toggle("open");
+  btn.textContent = open ? "Bonus ausblenden" : "Bonus anzeigen";
+}
+</script>

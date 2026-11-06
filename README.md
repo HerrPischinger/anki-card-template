@@ -44,3 +44,27 @@ Atkinson hyperlegible next is a font created by Braille Institute designed to im
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+## Cloze note type
+
+The [`cloze/`](cloze) folder contains the same design for Anki's **Cloze** note type: pastel-blue cloze deletions, the red **Important** box, the blue **Mnemonic** box, the **Bonus** button, the **Link** button, and an extra **Image** field.
+
+### Fields
+
+| Field | Required | Purpose |
+| --- | --- | --- |
+| `Text` | yes | Cloze text, for example `The {{c1::axillary nerve}} supplies the deltoid` |
+| `Bild` | no | Image, shown below the text |
+| `Kasten` | no | Content of the red "Important" box |
+| `Eselsbrücke` | no | Content of the blue "Mnemonic" box |
+| `Bonus` | no | Extra content, hidden until the Bonus button is clicked |
+| `Link` | no | A URL; shows a "Link öffnen" button when filled |
+
+### Installation
+
+1. Create a note type based on **Cloze** (Tools → Manage Note Types → Add → "Add: Cloze") and add the fields above.
+2. Click **Cards…** and paste [`cloze/front.html`](cloze/front.html) into **Front Template**.
+3. Paste [`cloze/back.html`](cloze/back.html) into **Back Template**.
+4. Paste [`cloze/style.css`](cloze/style.css) into **Styling**.
+
+The cloze styling is the main `style.css` plus the cloze rules, so use `cloze/style.css` for this note type.
