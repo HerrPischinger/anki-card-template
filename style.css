@@ -140,14 +140,9 @@
     display: none;
 }
 
-/* Shared button style: the bonus button and the link button look identical */
+/* Bonus button and link button share this style.
+   The link button is a real <button> inside an <a>, so both render identically. */
 .bonus-btn {
-    display: inline-block;
-    box-sizing: border-box;
-    margin: 0;
-    -webkit-appearance: none;
-    appearance: none;
-
     background-color: #f9f9f6;
     color: #2b2b2b;
 
@@ -155,10 +150,7 @@
     padding: 6px 12px;
     border-radius: 8px;
     cursor: pointer;
-    font-family: inherit;
     font-size: 16px;
-    line-height: 1.4;
-    text-decoration: none;
 
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
@@ -167,12 +159,17 @@
     background-color: #f0f0eb;
 }
 
-/* Link button: keep link colors identical to the other button */
+.bonus-btn svg {
+    vertical-align: -2px;
+    margin-right: 6px;
+}
+
+/* Link wrapper around the button: no underline, no extra spacing */
 a.link-btn,
 a.link-btn:visited,
 a.link-btn:hover {
-    color: #2b2b2b;
     text-decoration: none;
+    display: inline-block;
 }
 
 .nightMode .bonus-btn {
@@ -183,12 +180,6 @@ a.link-btn:hover {
 
 .nightMode .bonus-btn:hover {
     background-color: #4a4b50;
-}
-
-.nightMode a.link-btn,
-.nightMode a.link-btn:visited,
-.nightMode a.link-btn:hover {
-    color: #dcdcdc;
 }
 
 /* Collapsible bonus content (toggled via the .open class) */
