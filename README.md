@@ -20,10 +20,10 @@ Create a note type with these fields:
 | --- | --- | --- |
 | `Vorderseite` | yes | Front of the card (question) |
 | `Rückseite` | yes | Back of the card (answer) |
-| `Wichtig` | no | Content of the red "Important" box |
-| `Eselsbrücke` | no | Content of the blue "Mnemonic" box |
+| `Wichtig` | no | callout for important facts and pitfalls |
+| `Eselsbrücke` | no | mnemonics, background information|
 | `Bonus` | no | Extra content, hidden until the Bonus button is clicked |
-| `Link` | no | A URL; shows a "Link öffnen" button when filled |
+| `Link` | no | URL; shows a "Link öffnen" button when filled |
 
 ## Installation
 
@@ -40,16 +40,6 @@ Put a plain URL in the `Link` field, for example `https://www.youtube.com/watch?
 ## Font
 
 Atkinson hyperlegible next is a font created by Braille Institute designed to improve legibility and readability. Features of the font are  clear,  distinctive letters and numbers that make reading easier. 
-
-## Repository layout
-
-```
-.
-├── style.css             # card styling, also used by the preview
-└── templates/
-    ├── front.html        # front template
-    └── back.html         # back template
-```
 
 ## License
 
