@@ -19,12 +19,12 @@ Create a note type with these fields:
 
 | Field | Required | Purpose |
 | --- | --- | --- |
-| `Vorderseite` | yes | Front of the card (question) |
-| `Rückseite` | yes | Back of the card (answer) |
-| `Wichtig` | no | callout for important facts and pitfalls |
-| `Eselsbrücke` | no | mnemonics, background information|
+| `Front` | yes | Front of the card (question) |
+| `Back` | yes | Back of the card (answer) |
+| `Important` | no | callout for important facts and pitfalls |
+| `Mnemonic` | no | mnemonics, background information|
 | `Bonus` | no | Extra content, hidden until the Bonus button is clicked |
-| `Link` | no | URL; shows a "Link öffnen" button when filled |
+| `Link` | no | URL; shows a "Open link" button when filled |
 
 ## Link button
 
@@ -47,11 +47,11 @@ The [`cloze/`](cloze) folder contains the same design for Anki's **Cloze** note 
 | Field | Required | Purpose |
 | --- | --- | --- |
 | `Text` | yes | Cloze text, for example `The {{c1::axillary nerve}} supplies the deltoid` |
-| `Bild` | no | Image, shown below the text |
-| `Kasten` | no | Content of the red "Important" box |
-| `Eselsbrücke` | no | Content of the blue "Mnemonic" box |
+| `Image` | no | Image, shown below the text |
+| `Important` | no | Content of the red "Important" box |
+| `Mnemonic` | no | Content of the blue "Mnemonic" box |
 | `Bonus` | no | Extra content, hidden until the Bonus button is clicked |
-| `Link` | no | A URL; shows a "Link öffnen" button when filled |
+| `Link` | no | A URL; shows a "Open link" button when filled |
 
 ### Installation
 
