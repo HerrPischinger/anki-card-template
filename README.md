@@ -25,6 +25,13 @@ A minimal, readable card template for [Anki](https://apps.ankiweb.net/) with aut
 | [`style.css`](style.css) | Copy of `templates/style.css` |
 | [`index.html`](index.html) | Static preview page of the design (open it in a browser) |
 
+
+## About this project and AI disclosure
+
+I started this project years ago in my spare time during medical school with the help of YouTube tutorials, Reddit and StackOverflow posts. I am not a professional developer, and not every feature worked flawlessly. Now I used Claude Code to clean up the code, get the buttons working like I planmed and to translate it into English.
+
+Feedback is welcome.
+
 ## Basic note type
 
 ### Fields
@@ -84,11 +91,6 @@ The [`cloze/`](cloze) folder contains the same design for Anki's **Cloze** note 
 
 [Atkinson Hyperlegible](https://brailleinstitute.org/freefont) was created by the Braille Institute to improve legibility and readability. Its clear, distinctive letterforms make similar characters easier to tell apart, which is helpful when studying large volumes of text.
 
-## About this project and AI disclosure
-
-I started this project years ago in my spare time during medical school with the help of YouTube tutorials, Reddit and StackOverflow posts. I am not a professional developer, and not every feature worked flawlessly. I used Claude Code to clean up the code, get the buttons working and to translate it from German into English.
-
-Feedback is welcome.
 
 ## Contributing
 
