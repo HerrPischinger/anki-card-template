@@ -1,74 +1,97 @@
-# Anki card template
+# Anki Card Template
 
-A clean, readable card template for [Anki](https://apps.ankiweb.net/) with light and dark mode, a red **Important** box, a blue **Mnemonic** box, a collapsible **Bonus** section, and a **Link** button that opens any URL (for example a YouTube video). A basic as well as a cloze version of the card is included.
+A minimal, readable card template for [Anki](https://apps.ankiweb.net/) with automatic light and dark mode, highlighted callout boxes, a collapsible bonus section, and a link button. Includes a **Basic** and a **Cloze** note type that share the same design.
 
-![Screenshots of the temmplate](screenshots/device-shot.jpg)
+![Anki card template shown on desktop and mobile](screenshots/device-shot.jpg)
+
 ## Features
 
-- Light and dark mode (follows Anki's night mode)
-- Optional **Important** box (red) for pitfalls and key facts
-- Optional **Mnemonic** box (blue) which can be used for memory aids, as well as background information
-- Optional **Bonus** section, collapsed until you click the button
-- Optional **Link** button in the same style, opening a URL from a field
-- Empty optional fields leave no gaps, and the button row hides itself when there are no buttons
-- Uses [Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next)
+- **Light and dark mode**, following Anki's night mode
+- **Important box** (red) for pitfalls and key facts
+- **Mnemonic box** (blue) for memory aids and background information
+- **Bonus section**, collapsed until you click the button
+- **Link button** that opens a URL from a field, for example a YouTube video
+- **No empty gaps:** unused optional fields render nothing, and the button row hides itself when there are no buttons
+- **Cloze support** with pastel-blue deletions and an additional image field
+- **Highly legible typography** using [Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next), with system-font fallbacks
+- Plain HTML and CSS plus a few lines of JavaScript; no add-ons required
 
-## Fields
+## Repository structure
+
+| Path | Contents |
+| --- | --- |
+| [`templates/`](templates) | Front template, back template and styling for the Basic note type |
+| [`cloze/`](cloze) | Front template, back template and styling for the Cloze note type |
+| [`style.css`](style.css) | Copy of `templates/style.css` |
+| [`index.html`](index.html) | Static preview page of the design (open it in a browser) |
+
+## Basic note type
+
+### Fields
 
 Create a note type with these fields:
 
 | Field | Required | Purpose |
-| --- | --- | --- |
-| `Front` | yes | Front of the card (question) |
-| `Back` | yes | Back of the card (answer) |
-| `Important` | no | callout for important facts and pitfalls |
-| `Mnemonic` | no | mnemonics, background information|
-| `Bonus` | no | Extra content, hidden until the Bonus button is clicked |
-| `Link` | no | URL; shows a "Open link" button when filled |
+| --- | :---: | --- |
+| `Front` | ✓ | Front of the card (question) |
+| `Back` | ✓ | Back of the card (answer) |
+| `Important` | | Red callout for key facts and pitfalls |
+| `Mnemonic` | | Blue callout for memory aids and background information |
+| `Bonus` | | Extra content, hidden until the Bonus button is clicked |
+| `Link` | | URL; shows an **Open link** button when filled |
 
-## Link button
+### Installation
 
-Put a plain URL in the `Link` field, for example `https://www.youtube.com/watch?v=...`. On desktop the link opens in your default browser. 
-
-## Installation
-
-1. In Anki, open **Tools → Manage Note Types**, select your note type, and click **Fields** to add the fields above.
+1. In Anki, go to **Tools → Manage Note Types**, select your note type (or add a new one), and click **Fields** to add the fields above.
 2. Click **Cards…** for that note type.
 3. Paste the contents of [`templates/front.html`](templates/front.html) into **Front Template**.
 4. Paste the contents of [`templates/back.html`](templates/back.html) into **Back Template**.
-5. Paste the contents of [`style.css`](style.css) into **Styling**.
+5. Paste the contents of [`templates/style.css`](templates/style.css) into **Styling**.
 
 ## Cloze note type
 
-The [`cloze/`](cloze) folder contains the same design for Anki's **Cloze** note type: pastel-blue cloze deletions, the red **Important** box, the blue **Mnemonic** box, the **Bonus** button, the **Link** button, and an extra **Image** field.
+The [`cloze/`](cloze) folder contains the same design for Anki's **Cloze** note type, with pastel-blue cloze deletions and an additional image field.
 
 ### Fields
 
 | Field | Required | Purpose |
-| --- | --- | --- |
-| `Text` | yes | Cloze text, for example `The {{c1::axillary nerve}} supplies the deltoid` |
-| `Image` | no | Image, shown below the text |
-| `Important` | no | Content of the red "Important" box |
-| `Mnemonic` | no | Content of the blue "Mnemonic" box |
-| `Bonus` | no | Extra content, hidden until the Bonus button is clicked |
-| `Link` | no | A URL; shows a "Open link" button when filled |
+| --- | :---: | --- |
+| `Text` | ✓ | Cloze text, e.g. `The {{c1::axillary nerve}} supplies the deltoid` |
+| `Image` | | Image shown below the text |
+| `Important` | | Red callout for key facts and pitfalls |
+| `Mnemonic` | | Blue callout for memory aids and background information |
+| `Bonus` | | Extra content, hidden until the Bonus button is clicked |
+| `Link` | | URL; shows an **Open link** button when filled |
 
 ### Installation
 
-1. Create a note type based on **Cloze** (Tools → Manage Note Types → Add → "Add: Cloze") and add the fields above.
+1. Create a note type based on **Cloze** (**Tools → Manage Note Types → Add → Add: Cloze**) and add the fields above.
 2. Click **Cards…** and paste [`cloze/front.html`](cloze/front.html) into **Front Template**.
 3. Paste [`cloze/back.html`](cloze/back.html) into **Back Template**.
 4. Paste [`cloze/style.css`](cloze/style.css) into **Styling**.
 
-The cloze styling is the main `style.css` plus the cloze rules, so use `cloze/style.css` for this note type.
+> The cloze stylesheet is the Basic stylesheet plus the cloze rules, so always use `cloze/style.css` for the Cloze note type.
 
-## Font
+## Usage notes
 
-Atkinson hyperlegible next is a font created by Braille Institute designed to improve legibility and readability. Features of the font are  clear,  distinctive letters and numbers that make reading easier. 
+**Link button.** Put a plain URL in the `Link` field, e.g. `https://www.youtube.com/watch?v=...`. On desktop, the link opens in your default browser.
 
-## AI usage
-Claude code was used to clean my code up since I am not a professional develope. It was also used to translate my comments etc. from German into English.
+**Font.** The templates request *Atkinson Hyperlegible Next*, but the font is not bundled. To use it, install it on each device you study on ([download from Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next)). Without it, the cards fall back to *Atkinson Hyperlegible* or your system's default sans-serif font.
+
+**Customization.** Colors, spacing and font size are defined in the stylesheet and can be changed directly in Anki's **Styling** tab.
+
+## About the font
+
+[Atkinson Hyperlegible](https://brailleinstitute.org/freefont) was created by the Braille Institute to improve legibility and readability. Its clear, distinctive letterforms make similar characters easier to tell apart, which is helpful when studying large volumes of text.
+
+## AI disclosure
+
+Claude Code was used to clean up the code and to translate comments from German into English. I am not a professional developer, so feedback and pull requests are welcome.
+
+## Contributing
+
+Issues and pull requests are welcome. If you find a rendering problem, please mention your Anki version and platform (desktop, AnkiDroid or AnkiMobile).
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+Released under the [MIT License](LICENSE).
