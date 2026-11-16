@@ -86,7 +86,11 @@ The [`cloze/`](cloze) folder contains the same design for Anki's **Cloze** note 
 
 ## AI disclosure
 
-Claude Code was used to clean up the code and to translate comments from German into English. I am not a professional developer, so feedback and pull requests are welcome.
+## About this project
+
+I started this project years ago in my spare time during medical school with the help of YouTube tutorials, Reddit and StackOverflow posts. I am not a professional developer, and not every feature worked flawlessly. I used Claude Code to clean up the code, get the buttons working and to translate it from German into English.
+
+Feedback is welcome.
 
 ## Contributing
 
