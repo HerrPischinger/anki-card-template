@@ -84,9 +84,7 @@ The [`cloze/`](cloze) folder contains the same design for Anki's **Cloze** note 
 
 [Atkinson Hyperlegible](https://brailleinstitute.org/freefont) was created by the Braille Institute to improve legibility and readability. Its clear, distinctive letterforms make similar characters easier to tell apart, which is helpful when studying large volumes of text.
 
-## AI disclosure
-
-## About this project
+## About this project and AI disclosure
 
 I started this project years ago in my spare time during medical school with the help of YouTube tutorials, Reddit and StackOverflow posts. I am not a professional developer, and not every feature worked flawlessly. I used Claude Code to clean up the code, get the buttons working and to translate it from German into English.
 
