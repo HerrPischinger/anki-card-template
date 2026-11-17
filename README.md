@@ -1,6 +1,6 @@
 # Anki Card Template
 
-A minimal, readable card template for [Anki](https://apps.ankiweb.net/) with automatic light and dark mode, highlighted callout boxes, a collapsible bonus section, and a link button. Includes a **Basic** and a **Cloze** note type that share the same design.
+A minimal, readable card template for [Anki](https://apps.ankiweb.net/) with automatic light and dark mode, highlighted callout boxes, a collapsible bonus section, and a link button. Includes a **Basic** and a **Cloze** note type that share the same design. Perfect for your med school flashcards or any other topic you study!
 
 ![Anki card template shown on desktop and mobile](screenshots/device-shot-2.jpg)
 
@@ -13,7 +13,7 @@ A minimal, readable card template for [Anki](https://apps.ankiweb.net/) with aut
 - **Link button** that opens a URL from a field, for example a YouTube video
 - **No empty gaps:** unused optional fields render nothing, and the button row hides itself when there are no buttons
 - **Cloze support** with pastel-blue deletions and an additional image field
-- **Highly legible typography** using [Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next), with system-font fallbacks
+- **Highly legible typography** using [Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next)
 - Plain HTML and CSS plus a few lines of JavaScript; no add-ons required
 
 ## Repository structure
@@ -26,7 +26,7 @@ A minimal, readable card template for [Anki](https://apps.ankiweb.net/) with aut
 
 ## About this project and AI disclosure
 
-I started this project years ago in my spare time during medical school with the help of YouTube tutorials, Reddit and StackOverflow posts. I am not a professional developer, and not every feature worked flawlessly. Now I used Claude Code to clean up the code, get the buttons working like I planmed and to translate it into English.
+I started this project years ago in my spare time during medical school with the help of YouTube tutorials, Reddit and StackOverflow posts. I am not a professional developer, and not every feature worked flawlessly. Now I used Claude Code to clean up the code, get the buttons working like I planned and to translate it into English.
 
 Feedback is welcome.
 
@@ -81,18 +81,18 @@ The [`cloze/`](cloze) folder contains the same design for Anki's **Cloze** note 
 
 **Link button.** Put a plain URL in the `Link` field, e.g. `https://www.youtube.com/watch?v=...`. On desktop, the link opens in your default browser.
 
-**Font.** The templates request *Atkinson Hyperlegible Next*, but the font is not bundled. To use it, install it on each device you study on ([download from Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next)). Without it, the cards fall back to *Atkinson Hyperlegible* or your system's default sans-serif font.
+**Font.** The templates request *Atkinson Hyperlegible Next*, but the font is not bundled. To use it, install it on each device you study on ([download from Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next)). Without it, the cards fall back to your system's default sans-serif font.
 
 **Customization.** Colors, spacing and font size are defined in the stylesheet and can be changed directly in Anki's **Styling** tab.
 
 ## About the font
 
-[Atkinson Hyperlegible](https://brailleinstitute.org/freefont) was created by the Braille Institute to improve legibility and readability. Its clear, distinctive letterforms make similar characters easier to tell apart, which is helpful when studying large volumes of text.
+[Atkinson Hyperlegible](https://brailleinstitute.org/freefont) was created by the Braille Institute to improve legibility and readability. Its clear, distinctive letterforms make similar characters easier to tell apart, which is helpful when studying large volumes of text. Therefore I chose it for my template. 
 
 
 ## Contributing
 
-Issues and pull requests are welcome. If you find a rendering problem, please mention your Anki version and platform (desktop, AnkiDroid or AnkiMobile).
+Issues and pull requests are welcome. If you find a problem, please mention your Anki version and platform (desktop, AnkiDroid or AnkiMobile).
 
 ## License
 
