@@ -2,7 +2,7 @@
 
 A minimal, readable card template for [Anki](https://apps.ankiweb.net/) with automatic light and dark mode, highlighted callout boxes, a collapsible bonus section, and a link button. Includes a **Basic** and a **Cloze** note type that share the same design.
 
-![Anki card template shown on desktop and mobile](screenshots/device-shot.jpg)
+![Anki card template shown on desktop and mobile](screenshots/device-shot-2.jpg)
 
 ## Features
 
