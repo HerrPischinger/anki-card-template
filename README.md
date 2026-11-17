@@ -23,8 +23,6 @@ A minimal, readable card template for [Anki](https://apps.ankiweb.net/) with aut
 | [`templates/`](templates) | Front template, back template and styling for the Basic note type |
 | [`cloze/`](cloze) | Front template, back template and styling for the Cloze note type |
 | [`style.css`](style.css) | Copy of `templates/style.css` |
-| [`index.html`](index.html) | Static preview page of the design (open it in a browser) |
-
 
 ## About this project and AI disclosure
 
